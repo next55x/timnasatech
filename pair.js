@@ -16,11 +16,11 @@ function removeFile(FilePath) {
     }
 }
 
-router.get('/', async (req, res) => {
+router .get('/', async (req, res) => {
     let num = req.query.number;
     let dirs = './' + (num || `session`);
     
-    // Remove existing session if present
+    // Remove existing sessionif present
     await removeFile(dirs);
 
     let retryCount = 0;
@@ -66,7 +66,7 @@ router.get('/', async (req, res) => {
 
                     // Helper to generate a random Mega file ID
                     function generateRandomId(length = 6, numberLength = 4) {
-                        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                        const characters = 'TIMNASAtimnasaABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                         let result = '';
                         for (let i = 0; i < length; i++) {
                             result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -88,30 +88,16 @@ router.get('/', async (req, res) => {
                     // Send confirmation message
                     await Tohidkhan6332.sendMessage(userJid, { 
                         text: `
-*SESSION GENERATED SUCCESSFULY* ✅
-
-*Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
-https://github.com/pkdriller/NEXUS-XMD
-
-*Tᴇʟᴇɢʀᴀᴍ Gʀᴏᴜᴘ* 🌟
-https://t.me/dev_pkdrillerbot
-
-*WʜᴀᴛsAᴘᴘ Gʀᴏᴜᴘ* 🌟
-https://chat.whatsapp.com/CP8daWdavnXF11826hxius
+*SESSION GENERATED SUCCESSFULY* 
+*watsapp group* 🌟
+https://chat.whatsapp.com/JazGLNBxW5XDVEst3PN4kj
 
 *WʜᴀᴛsAᴘᴘ ᴄʜᴇɴɴᴀʟ* 🌟
-https://whatsapp.com/channel/0029Vad7YNyJuyA77CtIPX0x
-
-*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🌟 
-https://youtube.com/pkdriller1911
-
+https://whatsapp.com/channel/0029Vb5h5OVEKyZGARuSz52g
 *ɢɪᴛʜᴜʙ* 🌟
-http://GitHub.com/pkdriller 
+https://github.com/Next5x/TIMNASA_TMD1 
 
-*Wᴇʙsɪᴛᴇ* 🌟
-https://pr-driller-gho2.onrender.com
-
-*TOHID-AI--WHATTSAPP-BOT* 🥀
+*TIMNASA-AI--WHATTSAPP-BOT* 🥀
 ` 
                     });
 
